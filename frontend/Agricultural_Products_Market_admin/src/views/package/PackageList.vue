@@ -193,9 +193,9 @@ onMounted(() => fetchList())
 }
 
 :deep(.selected-row) {
-  background-color: #ecf5ff !important;
+  background-color: #ECF7EB !important;
 }
 :deep(.selected-row td) {
-  background-color: #ecf5ff !important;
+  background-color: #ECF7EB !important;
 }
 </style>

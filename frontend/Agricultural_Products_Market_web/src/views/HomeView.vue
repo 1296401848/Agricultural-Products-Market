@@ -13,7 +13,7 @@
 
         <!-- 桌面端导航栏 -->
         <nav class="nav-bar">
-          <el-menu :default-active="activeNav" mode="horizontal" background-color="#fff" text-color="#606266" active-text-color="#409eff">
+          <el-menu :default-active="activeNav" mode="horizontal" background-color="#fff" text-color="#606266" active-text-color="#3EB135">
             <el-menu-item index="home" @click="goToHome">
               <template #icon>
                 <el-icon><House /></el-icon>
@@ -55,7 +55,7 @@
         mode="vertical"
         background-color="#fff"
         text-color="#606266"
-        active-text-color="#409eff"
+        active-text-color="#3EB135"
         @select="handleMobileMenuSelect"
       >
         <el-menu-item index="home">
@@ -311,7 +311,7 @@ const handleMobileMenuSelect = (index) => {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #409eff;
+  color: #3EB135;
   margin-right: 2rem;
 }
 

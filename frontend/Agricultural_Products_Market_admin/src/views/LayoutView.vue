@@ -3,7 +3,7 @@
     <!-- 桌面端侧边栏 -->
     <aside class="sidebar desktop-only">
       <div class="sidebar-header"><h3>农产品商城管理</h3></div>
-      <el-menu default-active="1" class="el-menu-vertical-demo" :collapse="isCollapse" background-color="#001529" text-color="#fff" active-text-color="#409eff">
+      <el-menu default-active="1" class="el-menu-vertical-demo" :collapse="isCollapse" background-color="#001529" text-color="#fff" active-text-color="#3EB135">
         <el-sub-menu index="1"><template #title><el-icon><User /></el-icon><span>用户管理</span></template><el-menu-item index="1-1" @click="navTo('/user/list')">用户列表</el-menu-item></el-sub-menu>
         <el-sub-menu index="2"><template #title><el-icon><Document /></el-icon><span>农产品管理</span></template><el-menu-item index="2-1" @click="navTo('/produce/list')">农产品列表</el-menu-item></el-sub-menu>
         <el-sub-menu index="3"><template #title><el-icon><Menu /></el-icon><span>分类管理</span></template><el-menu-item index="3-1" @click="navTo('/category/list')">分类列表</el-menu-item></el-sub-menu>
@@ -32,7 +32,7 @@
     <!-- 移动端侧边抽屉 -->
     <el-drawer v-model="mobileDrawer" direction="ltr" size="220px" :with-header="false">
       <div class="mobile-nav-header"><h3>农产品商城管理</h3></div>
-      <el-menu default-active="1" background-color="#fff" active-text-color="#409eff" @select="onMobileSelect">
+      <el-menu default-active="1" background-color="#fff" active-text-color="#3EB135" @select="onMobileSelect">
         <el-sub-menu index="1"><template #title><el-icon><User /></el-icon><span>用户管理</span></template><el-menu-item index="/user/list">用户列表</el-menu-item></el-sub-menu>
         <el-sub-menu index="2"><template #title><el-icon><Document /></el-icon><span>农产品管理</span></template><el-menu-item index="/produce/list">农产品列表</el-menu-item></el-sub-menu>
         <el-sub-menu index="3"><template #title><el-icon><Menu /></el-icon><span>分类管理</span></template><el-menu-item index="/category/list">分类列表</el-menu-item></el-sub-menu>

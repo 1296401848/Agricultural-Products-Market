@@ -134,7 +134,7 @@ const goToLogin = () => {
   align-items: center;
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #409eff 0%, #337ecc 100%);
+  background: linear-gradient(135deg, #3EB135 0%, #328E2A 100%);
   border-radius: 20px;
   color: #fff;
   margin-bottom: 1rem;

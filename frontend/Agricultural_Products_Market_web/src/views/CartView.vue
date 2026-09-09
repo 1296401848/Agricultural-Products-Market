@@ -330,7 +330,7 @@ onMounted(async () => {
   transition: transform 0.3s; cursor: pointer;
 }
 .cart-item-card:hover { transform: translateY(-3px); }
-.cart-item-card.selected { border-color: #409eff; background: #ecf5ff; }
+.cart-item-card.selected { border-color: #3EB135; background: #ECF7EB; }
 
 .cart-checkbox { flex-shrink: 0; }
 .cart-checkbox :deep(.el-checkbox__inner) { width: 20px; height: 20px; }

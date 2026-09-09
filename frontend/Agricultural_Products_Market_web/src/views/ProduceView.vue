@@ -342,11 +342,11 @@ onMounted(async () => {
 }
 
 .package-section {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e6f3ff 100%);
-  border-color: #b3d8ff;
+  background: linear-gradient(135deg, #F0FAEF 0%, #E4F5E2 100%);
+  border-color: #B7E0B3;
 }
 .package-section .recommend-title {
-  color: #409eff;
+  color: #3EB135;
 }
 
 .recommend-header {

@@ -443,7 +443,7 @@ onMounted(async () => {
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #303133;
-  border-bottom: 2px solid #409eff;
+  border-bottom: 2px solid #3EB135;
   padding-bottom: 0.5rem;
 }
 
@@ -464,14 +464,14 @@ onMounted(async () => {
 }
 
 .address-item:hover {
-  border-color: #409eff;
-  background-color: #ecf5ff;
+  border-color: #3EB135;
+  background-color: #ECF7EB;
 }
 
 .address-item.active {
-  border-color: #409eff;
-  background-color: #ecf5ff;
-  box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.2);
+  border-color: #3EB135;
+  background-color: #ECF7EB;
+  box-shadow: 0 0 0 2px rgba(62, 177, 53, 0.2);
 }
 
 .address-header {

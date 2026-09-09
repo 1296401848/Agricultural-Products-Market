@@ -198,7 +198,7 @@
             <div class="info-item"><span class="label">订单状态：</span><el-tag :type="getStatusType(orderDetail.orderInfo.orderStatus)">{{ orderDetail.orderInfo.orderStatus || '未知' }}</el-tag></div>
             <div class="info-item"><span class="label">支付状态：</span><el-tag :type="orderDetail.orderInfo.payStatus === 1 ? 'success' : 'warning'">{{ orderDetail.orderInfo.payStatus === 1 ? '已支付' : '未支付' }}</el-tag></div>
             <div class="info-item"><span class="label">订单金额：</span><span class="value price">¥{{ detailOriginalTotal.toFixed(2) }}</span></div>
-            <div class="info-item" v-if="orderDetail.orderInfo.couponDiscount > 0"><span class="label">优惠券抵扣：</span><span class="value" style="color:#67c23a;font-weight:bold">-¥{{ orderDetail.orderInfo.couponDiscount.toFixed(2) }}</span></div>
+            <div class="info-item" v-if="orderDetail.orderInfo.couponDiscount > 0"><span class="label">优惠券抵扣：</span><span class="value" style="color:#3EB135;font-weight:bold">-¥{{ orderDetail.orderInfo.couponDiscount.toFixed(2) }}</span></div>
             <div class="info-item"><span class="label">实付金额：</span><span class="value price">¥{{ detailPayAmount.toFixed(2) }}</span></div>
             <div class="info-item"><span class="label">创建时间：</span><span class="value">{{ orderDetail.orderInfo.createTime }}</span></div>
             <div class="info-item" v-if="orderDetail.orderInfo.payTime"><span class="label">支付时间：</span><span class="value">{{ orderDetail.orderInfo.payTime }}</span></div>
@@ -451,7 +451,7 @@ onUnmounted(() => { if(timer) clearInterval(timer) })
 .coupon-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
 .coupon-card { display: flex; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.06); background: #fff; }
 .coupon-card.disabled,.coupon-card.used { opacity: 0.6; }
-.coupon-left { width: 100px; background: linear-gradient(135deg,#f56c6c,#e64242); color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0.75rem; flex-shrink: 0; }
+.coupon-left { width: 100px; background: linear-gradient(135deg,#3EB135,#328E2A); color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0.75rem; flex-shrink: 0; }
 .coupon-type-tag { font-size: 0.75rem; opacity: 0.85; margin-bottom: 0.15rem; }
 .coupon-value .symbol { font-size: 0.85rem; }
 .coupon-value .num { font-size: 1.6rem; font-weight: bold; }
@@ -467,7 +467,7 @@ onUnmounted(() => { if(timer) clearInterval(timer) })
 .contact-us { text-align: center; margin-top: 1.5rem; padding: 1rem 0; }
 .contact-body { text-align: center; padding: 1rem 0; }
 .contact-text { color: #606266; margin: 0 0 1rem; }
-.contact-email { font-size: 1.2rem; font-weight: bold; color: #409eff; padding: 0.75rem 1.5rem; background: #ecf5ff; border-radius: 8px; display: inline-block; }
+.contact-email { font-size: 1.2rem; font-weight: bold; color: #3EB135; padding: 0.75rem 1.5rem; background: #ECF7EB; border-radius: 8px; display: inline-block; }
 :deep(.address-dialog) { max-width: 500px; }
 :deep(.password-dialog) { max-width: 500px; }
 :deep(.map-dialog) { max-width: 900px; }
@@ -484,8 +484,8 @@ onUnmounted(() => { if(timer) clearInterval(timer) })
 .total-price { color: #f56c6c; font-weight: bold; font-size: 1.2rem; }
 
 .order-items-grouped { display: flex; flex-direction: column; }
-.pkg-group { border: 1px solid #fae3c4; border-radius: 6px; overflow: hidden; margin-bottom: 0.4rem; }
-.pkg-group-header { display: flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.6rem; background: #fdf6ec; font-weight: bold; color: #e6a23c; font-size: 0.9rem; }
+.pkg-group { border: 1px solid #C5E8C2; border-radius: 6px; overflow: hidden; margin-bottom: 0.4rem; }
+.pkg-group-header { display: flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.6rem; background: #ECF7EB; font-weight: bold; color: #3EB135; font-size: 0.9rem; }
 .pkg-group-name { flex: 1; }
 .pkg-group-items { padding: 0.15rem 0; }
 .order-item-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.3rem 0.6rem; border-bottom: 1px solid #ebeef5; font-size: 0.9rem; }

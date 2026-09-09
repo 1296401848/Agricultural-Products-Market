@@ -1,0 +1,39 @@
+/**
+ * 全局主题色覆盖：将 Element Plus 默认主色（蓝色 #409eff）改为 #3EB135
+ * 同时把 success / warning 两个语义色统一到同一套绿色系，
+ * 使 primary / success / warning 按钮与标签都显示为 #3EB135；
+ * danger（删除等危险操作）保持 Element Plus 默认红色。
+ * 注意：打包后 Element Plus 的样式可能排在本文件之后，故用 :root:root 提高优先级
+ */
+/* 使用 :root:root 提高优先级，避免被 Element Plus 默认变量覆盖 */
+:root:root {
+  /* 主色 */
+  --el-color-primary: #3EB135;
+  --el-color-primary-rgb: 62, 177, 53;
+  --el-color-primary-light-3: rgb(120, 201, 115);
+  --el-color-primary-light-5: rgb(159, 216, 154);
+  --el-color-primary-light-7: rgb(197, 232, 194);
+  --el-color-primary-light-8: rgb(216, 239, 214);
+  --el-color-primary-light-9: rgb(236, 247, 235);
+  --el-color-primary-dark-2: rgb(50, 142, 42);
+
+  /* 成功色统一为绿色系 */
+  --el-color-success: #3EB135;
+  --el-color-success-rgb: 62, 177, 53;
+  --el-color-success-light-3: rgb(120, 201, 115);
+  --el-color-success-light-5: rgb(159, 216, 154);
+  --el-color-success-light-7: rgb(197, 232, 194);
+  --el-color-success-light-8: rgb(216, 239, 214);
+  --el-color-success-light-9: rgb(236, 247, 235);
+  --el-color-success-dark-2: rgb(50, 142, 42);
+
+  /* 警告色统一为绿色系 */
+  --el-color-warning: #3EB135;
+  --el-color-warning-rgb: 62, 177, 53;
+  --el-color-warning-light-3: rgb(120, 201, 115);
+  --el-color-warning-light-5: rgb(159, 216, 154);
+  --el-color-warning-light-7: rgb(197, 232, 194);
+  --el-color-warning-light-8: rgb(216, 239, 214);
+  --el-color-warning-light-9: rgb(236, 247, 235);
+  --el-color-warning-dark-2: rgb(50, 142, 42);
+}

@@ -143,7 +143,7 @@ const goToForgotPassword = () => {
   align-items: center;
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #409eff 0%, #337ecc 100%);
+  background: linear-gradient(135deg, #3EB135 0%, #328E2A 100%);
   border-radius: 20px;
   color: #fff;
   margin-bottom: 1rem;
@@ -199,9 +199,9 @@ const goToForgotPassword = () => {
 .contact-email {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #409eff;
+  color: #3EB135;
   padding: 0.75rem 1.5rem;
-  background: #ecf5ff;
+  background: #ECF7EB;
   border-radius: 8px;
   display: inline-block;
 }
