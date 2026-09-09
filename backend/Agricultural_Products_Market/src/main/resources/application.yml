@@ -1,0 +1,75 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: agricultural_products_market
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/agricultural_products_market?useSSL=false&serverTimezone=UTC
+    username: ${agricultural_products_market.datasource.username}
+    password: ${agricultural_products_market.datasource.password}
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  # 邮箱配置
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 1296401848@qq.com
+    password: enxkncfacqzkheae
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  # Redis 配置（缓存验证码）
+  redis:
+    data:
+      host: localhost
+      port: 6379
+      password:  # 无密码留空即可
+      database: 0
+
+logging:
+  level:
+    com:
+      wyt:
+        mapper: debug
+        service: info
+        controller: info
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# Knife4j配置
+knife4j:
+  enable: true
+
+jwt:
+  secret: ${agricultural_products_market.jwt.secret}
+
+# 高德地图配置
+amap:
+  securityJsCode: ${agricultural_products_market.amp.securityJsCode}
+
+alipay:
+  app-id: ${agricultural_products_market.alipy.app-id}
+  gateway-url: ${agricultural_products_market.alipy.gateway-url}
+  private-key: ${agricultural_products_market.alipy.private-key}
+  alipay-public-key: ${agricultural_products_market.alipy.alipay-public-key}
+  notify-url: ${agricultural_products_market.alipy.notify-url}
+  return-url: ${agricultural_products_market.alipy.return-url}
+
+app:
+  frontend-url: ${APP_FRONTEND_URL:http://localhost:5173}
+
