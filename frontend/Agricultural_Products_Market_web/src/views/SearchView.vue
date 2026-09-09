@@ -44,7 +44,7 @@
     <div class="produce-list">
       <el-card v-for="produce in produces" :key="produce.id" class="produce-card" @click="$router.push('/produce/' + produce.id)">
         <template #header><div class="produce-title">{{ produce.produceName }}</div></template>
-        <div class="produce-cover"><el-image :src="produce.coverUrl" :fit="'cover'" style="width:160px" /></div>
+        <div class="produce-cover"><el-image :src="produce.coverUrl" :fit="'cover'" /></div>
         <div class="produce-info">
           <div class="produce-manufacturer">生产商：{{ produce.manufacturer }}</div>
           <div class="produce-price">¥{{ produce.price }}</div>
@@ -147,8 +147,8 @@ watch(() => route.query.keyword, (v) => { if (v) { keyword.value = v; doSearch()
 .produce-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
 .produce-card { cursor: pointer; transition: transform 0.3s; }
 .produce-card:hover { transform: translateY(-3px); }
-.produce-cover { height: 160px; margin-bottom: 0.5rem; }
-.produce-cover img { width: 100%; height: 100%; object-fit: cover; }
+.produce-cover { height: 160px; margin-bottom: 0.5rem; border-radius: 6px; overflow: hidden; }
+.produce-cover .el-image { width: 100%; height: 100%; display: block; }
 .produce-title { font-weight: bold; font-size: 0.9rem; line-height: 1.2; }
 .produce-manufacturer { color: #606266; font-size: 0.8rem; margin-bottom: 0.2rem; }
 .produce-price { color: #f56c6c; font-weight: bold; font-size: 0.9rem; margin-bottom: 0.2rem; }

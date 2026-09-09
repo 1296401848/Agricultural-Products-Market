@@ -15,7 +15,7 @@
             </span>
           </div>
           <div class="produce-price-large">¥{{ produce.price }}</div>
-          <div class="produce-stock-large">库存：{{ produce.stock }} 本</div>
+          <div class="produce-stock-large">库存：{{ produce.stock }} 件</div>
           <div class="produce-description">
             <h3>农产品简介</h3>
             <p>{{ produce.description || '暂无简介' }}</p>
@@ -128,18 +128,27 @@ onUnmounted(() => {
 }
 
 .produce-cover-large {
-  width: 400px;
+  width: 340px;
   max-width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
+  height: 420px;
   flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.produce-cover-large img {
+.produce-cover-large :deep(.el-image) {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.produce-cover-large :deep(.el-image > img),
+.produce-cover-large :deep(.el-image__inner) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  object-position: center;
+  display: block;
 }
 
 .produce-info-detail {
@@ -235,7 +244,7 @@ onUnmounted(() => {
   .produce-cover-large {
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 3 / 4;
+    height: 320px;
   }
 
   .produce-title-large {

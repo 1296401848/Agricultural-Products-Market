@@ -104,7 +104,7 @@
           <div class="produce-title">{{ produce.produceName }}</div>
         </template>
         <div class="produce-cover">
-          <el-image :src="produce.coverUrl" :fit="'cover'" style="width: 160px"/>
+          <el-image :src="produce.coverUrl" :fit="'cover'" />
         </div>
         <div class="produce-info">
           <div class="produce-manufacturer">生产商：{{ produce.manufacturer }}</div>
@@ -517,12 +517,14 @@ onMounted(async () => {
 .produce-cover {
   height: 160px;
   margin-bottom: 0.8rem;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-.produce-cover img {
+.produce-cover .el-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: block;
 }
 
 .produce-info {

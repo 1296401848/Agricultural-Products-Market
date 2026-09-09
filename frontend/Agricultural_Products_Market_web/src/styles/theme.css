@@ -37,3 +37,44 @@
   --el-color-warning-light-9: rgb(236, 247, 235);
   --el-color-warning-dark-2: rgb(50, 142, 42);
 }
+
+/**
+ * 商品图片统一尺寸：京东主图原始比例不一致（1:1 / 4:3 / 3:4），
+ * 若只靠 object-fit 会被部分卡片里的固定高度裁切或拉伸，
+ * 这里统一让 el-image 容器及其内部图片按容器宽高等比裁切填充，
+ * 保证列表、详情页里所有商品图尺寸一致、不变形。
+ */
+.el-image,
+.el-image > img,
+.el-image__inner,
+.el-image__wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.el-image > img,
+.el-image__inner {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 详情页大图：统一 4:5 画布，尺寸略小以避免图片被放大后发虚 */
+.produce-detail-content .produce-cover-large {
+  height: 420px;
+  aspect-ratio: auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.produce-detail-content .produce-cover-large .el-image {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .produce-detail-content .produce-cover-large {
+    width: 100%;
+    height: 320px;
+  }
+}
